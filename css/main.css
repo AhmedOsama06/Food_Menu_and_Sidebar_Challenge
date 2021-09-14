@@ -1,0 +1,353 @@
+/* Start Global Code */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --main-color: #E8272E;
+}
+/* End Global Code */
+/* Start Container */
+.container {
+    margin: 30px auto;
+    height: fit-content;
+    max-width: 100%;
+    display: flex;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    .container {
+        width: 500px;
+        flex-direction: column;
+    }
+    .content {
+        width: 100%;
+    }
+    .sidebar {
+        width: 100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 800px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 900px;
+    }
+}
+/* End Container */
+/* Start Components */
+/* End Components */
+.card {
+    background-color: #F9F9F9;
+    height: 180px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px 2px #777 , -1px -1px 5px 2px #fff;
+    overflow: hidden;
+    display: flex;
+}
+.card img {
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    max-width: 100%;
+}
+.card .inner {
+    margin-left: 25px;
+    margin-Top: 15px;
+}
+.card .inner h2 {
+    margin-bottom: 8px;
+    font-family: 'Dancing Script', cursive;
+}
+.card .inner .desc {
+    display: flex;
+    margin: 5px 0px;
+}
+.card .inner .desc I {
+    margin-right: 5px;
+    color: var(--main-color);
+}
+.card .inner .desc .date {
+    display: flex;
+    border-right: 2px soild #777;
+    margin-right: 10px;
+}
+.card .inner .desc .com {
+    display: flex;
+}
+.card .inner .p {
+    color: #777;
+    margin-top: 10px;
+    width: 80%;
+}
+.card .inner a {
+    color: var(--main-color);
+    position: relative;
+    top: 10px;
+}
+.head {
+    padding: 15px 10px 10px 0px;
+    border-bottom: 1px solid #ddd;
+}
+/* Start Content */
+.content {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .slider {
+    display: flex;
+    margin-top: 20px;
+}
+.content .slider .circle {
+    color: #777;
+    border: 1px solid #777;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content .slider .circle.active {
+    background-color: var(--main-color);
+    color: white;
+    border-color: var(--main-color);
+}
+.content .slider .circle.arrow {
+    cursor: pointer;
+    transition: transform .2s;
+}
+.content .slider .circle.arrow:hover {
+    transform: translateY(-5px);
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    .content {
+        width: 100%;
+    }
+}
+/* End Content */
+/* Start Sidebar */
+.sidebar {
+    width: 35%;
+    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.sidebar .inner {
+    padding-left: 40px;
+}
+.sidebar .inner .search {
+    display: flex;
+}
+.sidebar .inner .search input {
+    border: 3px solid #ddd;
+    outline: none;
+    border-radius: 30px;
+    padding: 10px 30px 10px 10px;
+    font-size: 15px;
+}
+.sidebar .inner .search i {
+    position: relative;
+    top: 13px;
+    right: 30px;
+}
+.sidebar .inner .cat ul {
+    list-style: none;
+    padding: 20px 0px;
+}
+.sidebar .inner .cat ul li {
+    margin: 5px 0px;
+    color: #00000094;
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar .inner .cat ul li i {
+    margin-right: 5px;
+}
+.sidebar .inner .recent .box {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0px;
+    display: flex;
+}
+.sidebar .inner .recent .box .desc {
+    margin-left: 10px;
+}
+.sidebar .inner .recent .box .desc > p {
+    margin-bottom: 10px;
+}
+.sidebar .inner .recent .box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+.sidebar .inner .recent .box .in {
+    display: flex;
+}
+.sidebar .inner .recent .box .in i {
+    content: "\f133";
+    color: var(--main-color);
+    margin-right: 5px;
+}
+.sidebar .inner .recent .box .in .date {
+    display: flex;
+    padding-right: 5px;
+    border-right: 3px solid #777;
+}
+.sidebar .inner .recent .box .in .com {
+    display: flex;
+}
+.sidebar .inner .recent .box .in .com i {
+    margin-left: 5px;
+}
+.sidebar .inner .recent .special {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-image: url(../images/delicious-vietnamese-food-including-pho-ga-noodles-spring-rolls-white-table_181624-34062.jpg);
+    background-size: cover;
+    margin: 15px 0px;
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 80%);
+    color: white;
+}
+.sidebar .inner .recent .special .overlay .content {
+    margin-left: 15px;
+    margin-top: 45px;
+}
+.sidebar .inner .recent .special .overlay h1 {
+    margin-bottom: 5px;
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+}
+.sidebar .inner .recent .special .overlay .one {
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+}
+.sidebar .inner .recent .special .overlay .one span {
+    font-size: 50px;
+    color: var(--main-color);
+    margin-right: 5px;
+}
+.sidebar .inner .recent .special .overlay .two {
+    margin: 10px 0px;
+}
+.sidebar .inner .recent .special .overlay button {
+    width: 140px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: large;
+    cursor: pointer;
+}
+.sidebar .ins .imgs {
+    margin-top: 15px;
+}
+.sidebar .ins .imgs img {
+    width: 87px;
+    height: 87px;
+    border-radius: 10px;
+}
+.sidebar .tags .holder {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar .tags .tag {
+    margin: 5px 5px 5px 0px;
+    background-color: #ddd;
+    width: fit-content;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+@media (min-width: 0px) and (max-width: 767px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+/* End Sidebar */
+/* Start Footer */
+.footer {
+    background-image: url(../images/360_F_254208823_NXcV5RCcWJ1vgSuWjhPqIpPmqXIyBrDO.jpg);
+    height: 120px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 200px;
+    position: relative;
+}
+.footer .subscribe {
+    background-color: var(--main-color);
+    position: absolute;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer .subscribe .info {
+    width: 50%;
+}
+.footer .subscribe .input {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.footer .subscribe .input input[type="email"] {
+    background-color: transparent;
+    width: 100%;
+    margin-left: 20px;
+    position: relative;
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    border-radius: 15px;
+    outline: none;
+    background-color: rgba(260, 260, 260,20%);
+}
+.footer .subscribe .input input[type="email"]::placeholder {
+    color: white;
+    font-size: smaller;
+}
+.footer .subscribe .input input[type="submit"] {
+    position: absolute;
+    border: none;
+    padding: 10px 20px;
+    right: 30px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    background-color: white;
+    color: var(--main-color);
+    box-shadow: 1px 1px #ddd;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.footer .subscribe p {
+    font-size: 15px;
+    width: 100%;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+/* End Footer */
